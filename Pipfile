@@ -7,6 +7,7 @@ name = "pypi"
 pillow = "*"
 django = "*"
 psycopg2-binary = "*"
+django-admin-interface = "*"
 
 [dev-packages]
 
