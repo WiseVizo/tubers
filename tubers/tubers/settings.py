@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "webpages.apps.WebpagesConfig",
     "admin_interface",
     "colorfield",
     "django.contrib.admin",
@@ -112,10 +113,11 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATIC_URL = "static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "tubers/static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static") # where all static files will get collected
+STATIC_URL = "static/" # for loading static files 
+target_path = os.path.join("tubers", "static")
+STATICFILES_DIRS = [ # tells where else static files can be 
+    os.path.join(BASE_DIR, target_path) 
 ]
 
 # Default primary key field type
