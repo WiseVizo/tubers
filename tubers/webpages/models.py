@@ -7,6 +7,6 @@ class Slider(models.Model):
     button_text = models.CharField(max_length=100)
     image = models.ImageField(upload_to='slider_images/')
     created_at = models.DateTimeField(auto_now_add=True)
-
+    contact_link = models.URLField(default="https://www.youtube.com/") 
     def __str__(self):
         return self.heading
