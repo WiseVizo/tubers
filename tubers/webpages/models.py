@@ -10,3 +10,19 @@ class Slider(models.Model):
     contact_link = models.URLField(default="https://www.youtube.com/") 
     def __str__(self):
         return self.heading
+    
+class OurTeam(models.Model):
+    class Meta:
+        verbose_name = "Our Team"
+        verbose_name_plural = "Our Team"
+
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    role = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to='team/%Y/%m')
+    facebook_link = models.URLField(default="https://www.facebook.com/")
+    linkedin_link = models.URLField(default="https://www.linkedin.com/")
+    created_at = models.DateTimeField(auto_now_add=True)
+    def __str__(self):
+        return self.first_name + " " + self.last_name
+    
