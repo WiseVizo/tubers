@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Youtuber(models.Model):
     CREW_CHOICES = (
@@ -34,7 +34,7 @@ class Youtuber(models.Model):
     sub_count = models.CharField(max_length=255)
     category = models.CharField(max_length=255, choices=CATEGORY_CHOICES)
 
-    description = models.TextField()
+    description = RichTextField()
     channel_link = models.URLField(default="https://www.youtube.com")
 
     age = models.IntegerField()
