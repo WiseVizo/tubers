@@ -91,196 +91,28 @@
       <p class="pt-2 pb-3 text-center">YTubers who recently got onboard with us</p>
 
       <div class="tubers grid">
-        <!-- person 1 -->
+        {% for tuber in youtubers %}
         <div class="card border-0 text-center">
           <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
+            <img src="{{tuber.photo.url}}" class="card-img-top" alt="team-member">
 
           </div>
           <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
+            <h5 class="card-title">{{tuber.first_name}} {{tuber.last_name}}</h5>
+            <p class="card-text">{{tuber.category}}</p>
             <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
+              <button class="btn btn-accent"> {{tuber.city}} </button>
+              <button class="btn btn-accent"> {{tuber.age}} </button>
+              <button class="btn btn-accent"> {{tuber.height}}</button>
             </div>
             <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
+              <button class="btn btn-accent"> {{tuber.crew}} </button>
+              <button class="btn btn-accent"> {{tuber.camera_type}} </button>
+              <button class="btn btn-accent"> {{tuber.sub_count}} </button>
             </div>
           </div>
         </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-        <!-- person 1 -->
-        <div class="card border-0 text-center">
-          <div>
-            <img src="https://picsum.photos/640/480" class="card-img-top" alt="team-member">
-
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Team Member One</h5>
-            <p class="card-text">Gaming</p>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
-            </div>
-            <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
-            </div>
-          </div>
-        </div>
-
+        {% endfor %}
       </div>
 
     </section>
