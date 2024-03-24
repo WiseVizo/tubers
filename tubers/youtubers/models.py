@@ -40,7 +40,7 @@ class Youtuber(models.Model):
     channel_link = models.URLField(default="https://www.youtube.com")
 
     age = models.IntegerField()
-    hieght = models.IntegerField()
+    height = models.IntegerField()
     price = models.IntegerField()
 
     photo = models.ImageField(upload_to='youtubers/%Y/%m/%d')
