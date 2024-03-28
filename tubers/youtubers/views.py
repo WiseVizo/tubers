@@ -16,4 +16,12 @@ def youtuber_details(request, id):
     return render(request, "youtubers/youtuber_details.html", data)
 
 def search(request):
-    pass
+    tubers = Youtuber.objects.all()
+    if 'keyword' in request.GET:
+        keyword = request.GET['keyword']
+        tubers = tubers.filter(description__icontains=keyword)
+
+    data = {
+        'tubers' : tubers,
+    }
+    return render(request, "youtubers/search.html", data)
