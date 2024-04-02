@@ -2,11 +2,22 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def login_user(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(username=username, password=password)
+        if user:
+            messages.success(request, "Logged In Successfully")
+            auth.login(request, user)
+            return redirect("home")
+        messages.error(request, "invalid credintails")
+        return redirect("login_user")
     return render(request, "tubers_users/login.html")
 
+@login_required(login_url='login_user')
 def logout_user(request):
     logout(request)
     return redirect('home')
@@ -34,6 +45,6 @@ def register_user(request):
             return redirect("register_user")
 
     return render(request, "tubers_users/register.html")
-
+@login_required(login_url='login_user')
 def dashboard(request):
     return render(request, "tubers_users/dashboard.html")

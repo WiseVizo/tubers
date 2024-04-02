@@ -40,6 +40,7 @@ button:hover {
 	padding: 20px 25px;
 	font-size: 19px;
 	border-radius: 8px;
+	color: black;
 }
 textarea {
 	padding: 20px 25px;
