@@ -24,4 +24,5 @@ urlpatterns = [
     path("", include("webpages.urls")),
     path("youtubers/", include("youtubers.urls")),
     path("tubers_users/", include("tubers_users.urls")),
+    path('accounts/', include('allauth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

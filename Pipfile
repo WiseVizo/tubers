@@ -9,6 +9,7 @@ django = "*"
 psycopg2-binary = "*"
 django-admin-interface = "*"
 django-ckeditor = "*"
+django-allauth = "*"
 
 [dev-packages]
 
