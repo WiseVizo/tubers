@@ -26,6 +26,7 @@ SECRET_KEY = "django-insecure-)ayh(son-e_1=x59&8-_6ywdpy768)+v609#$2+*fy$c_=yrw9
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_REDIRECT_URL = 'home'
 
 
 # Application definition
